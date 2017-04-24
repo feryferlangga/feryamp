@@ -4,20 +4,17 @@
 <title>Results Only Layout</title>
 
 <!-- Put the following javascript before the closing </head> tag. -->
-<form action="http://www.google.co.id" id="cse-search-box">
-  <div>
-    <input type="hidden" name="cx" value="partner-pub-9752805408784908:9762972879" />
-    <input type="hidden" name="ie" value="UTF-8" />
-    <input type="text" name="q" size="55" />
-    <input type="submit" name="sa" value="Search" />
-  </div>
-</form>
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript">google.load("elements", "1", {packages: "transliteration"});</script>
-<script type="text/javascript" src="http://www.google.com/cse/t13n?form=cse-search-box&t13n_langs=en"></script>
-
-<script type="text/javascript" src="http://www.google.co.id/coop/cse/brand?form=cse-search-box&amp;lang=in"></script>
-
+<script>
+  (function() {
+    var cx = 'partner-pub-9752805408784908:9762972879';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
 </head>
 
 <body>
