@@ -1,1 +1,31 @@
-<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/057552215252549886a9d3b4a51ff25c.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+ var feed = new Instafeed({
+                            get: 'user',
+                            userId: 3177707902, //User ID
+                            limit: 15,
+                            sortBy: 'none',
+                            accessToken: '3177707902.1677ed0.909231bbfd554a2c8c000702191c1f8c', //Access Token
+                            template: '<div class="item"><a class="link_image" href="{{link}}" target="_blank" ><img src="{{image}}"></a></div>',
+                            resolution: 'standard_resolution',
+                            after: function () {
+						$(document).ready(function(){
+                            $('.instafeed').owlCarousel({
+                                navigation : false,
+                                slideSpeed : 350,
+                                pagination: false,
+								transitionStyle : "fade",
+                                itemsCustom: 	[[0, 2], 
+                                                [480, 3], 
+                                                [600, 4], 
+                                                [800, 5], 
+                                                [1024, 6], 
+                                                [1080, 6], 
+                                                [1200, 8], 
+                                                [1600, 9], 
+                                                [1920, 10]]
+                            });
+						});
+                            }
+
+                            });
+                            feed.run();
+                            //]]>
